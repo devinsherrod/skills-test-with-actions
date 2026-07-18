@@ -25,6 +25,3 @@ def get_nth_fibonacci(n):
             a, b = b, a + b
         return b
 
-
-from src.calculations import area_of_circle, get_nth_fibonacci
-
