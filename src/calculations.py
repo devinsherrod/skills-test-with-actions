@@ -1,6 +1,5 @@
 # System Modules
 import math
-
 # Installed Modules
 # - None
 
@@ -25,3 +24,4 @@ def get_nth_fibonacci(n):
         for _ in range(2, n + 1):
             a, b = b, a + b
         return b
+
