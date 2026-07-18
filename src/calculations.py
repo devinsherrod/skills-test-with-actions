@@ -1,6 +1,6 @@
 # System Modules
 import math
-
+import pytest
 # Installed Modules
 # - None
 
@@ -25,3 +25,16 @@ def get_nth_fibonacci(n):
         for _ in range(2, n + 1):
             a, b = b, a + b
         return b
+
+
+from src.calculations import area_of_circle, get_nth_fibonacci
+
+def test_area_of_circle_negative_radius():
+    """Test that negative radius raises ValueError"""
+    with pytest.raises(ValueError, match="Radius cannot be negative"):
+        area_of_circle(-5)
+
+def test_get_nth_fibonacci_negative_n():
+    """Test that negative n raises ValueError"""
+    with pytest.raises(ValueError, match="n cannot be negative"):
+        get_nth_fibonacci(-1)
